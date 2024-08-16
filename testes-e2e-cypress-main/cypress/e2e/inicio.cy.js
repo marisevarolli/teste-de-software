@@ -1,14 +1,13 @@
 //    TITULO - H1 ////////////////////////////////////////////////////////////////////////////////////////////////////
 describe('Página Principal', () => {
-  beforeEach( () => {
+  beforeEach(() => {
     cy.visit('http://localhost:3000/')
-})
-  it('Deve renderizar h1 com o texto correto!', () => {
-    // cy.visit('http://localhost:3000')
-    cy.getByData('titulo-principal').contains('Experimente mais liberdade no controle da sua vida financeira. Crie sua conta com a gente!')
   })
-})
 
+  it('Deve renderizar h1 com o texto correto', () => {
+    cy.getByData('principal').find('h1').should('contain', 'Experimente mais liberdade no controle da sua vida financeira. Crie sua conta com a gente!') // Verifica o texto do h1
+  })})
+  
 // IMAGENS - IMG /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 describe('Página Principal', () => {
@@ -63,6 +62,16 @@ describe('Página Principal', () => {
 
 // PARAGRAFOS - P /////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//describe('Página Principal', () => {
+//  beforeEach( () => {
+//    cy.visit('http://localhost:3000/')
+//})
+//  it('Deve renderizar p com o texto correto!', () => {
+//    // cy.visit('http://localhost:3000')
+//    cy.getByData('p-1').contains('Isso mesmo, nossa conta é digital, sem custo fixo e mais que isso: sem tarifa de manutenção.')
+//  })
+//})
+
 describe('Página Principal', () => {
   beforeEach( () => {
     cy.visit('http://localhost:3000/')
@@ -104,6 +113,7 @@ describe('Página Principal', () => {
 })
 
 // SUB-TITULO - H3 E H2 /////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 describe('Página Principal', () => {
   beforeEach( () => {
