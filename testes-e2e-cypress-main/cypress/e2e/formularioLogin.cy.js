@@ -15,7 +15,7 @@ describe('Formulário de login', () => { // contexto do nosso teste
         /* clicamos no botão login e inserimos os dados de login para testar o cenário triste, onde o email está inválido */
     })
 
-    it.only('Não deve permitir um campo em branco', () => {
+    it('Não deve permitir um campo em branco', () => {
 
         cy.getByData('botao-login').click()
         
@@ -25,6 +25,6 @@ describe('Formulário de login', () => { // contexto do nosso teste
         cy.getByData('botao-enviar').click()
         cy.getByData('mensagem-erro').should('exist').and('have.text', 'O campo email é obrigatório') /* a
         
-        mensagem exibida deve ser: "o campo email é obrigatório" */
+        mensagem exibida deve ser: "O campo email é obrigatório" */
         })
 })
